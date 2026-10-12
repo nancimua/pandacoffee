@@ -1,0 +1,355 @@
+/* 门店页面专属样式 */
+
+/* 门店头部样式 */
+.locate-hero {
+	padding: 60px 0;
+	text-align: center;
+	background-color: var(--bg);
+}
+
+.locate-hero h1 {
+	font-size: 2.5rem;
+	margin-bottom: 15px;
+	color: var(--text);
+}
+
+.locate-hero p {
+	font-size: 1.1rem;
+	color: #666;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+body.dark-mode .locate-hero p {
+	color: #bbb;
+}
+
+/* 地图展示区 */
+.map-section {
+	padding: 20px 0 40px;
+	background-color: var(--bg);
+}
+
+.map-img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 0 2px 15px var(--shadow);
+}
+
+/* 门店列表样式 */
+.store-list {
+	padding: 40px 0 60px;
+	background-color: var(--bg);
+}
+
+.store-card {
+	display: flex;
+	background-color: var(--card-bg);
+	border-radius: 8px;
+	box-shadow: 0 2px 10px var(--shadow);
+	margin-bottom: 30px;
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .store-card {
+	border-color: #444;
+}
+
+.store-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 20px var(--shadow);
+}
+
+.store-img {
+	flex: 0 0 300px;
+}
+
+.store-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.store-info {
+	flex: 1;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.store-info h3 {
+	font-size: 1.5rem;
+	margin-bottom: 15px;
+	color: var(--text);
+}
+
+.store-address,
+.store-phone,
+.store-hours {
+	margin-bottom: 12px;
+	font-size: 1rem;
+	color: var(--text);
+	display: flex;
+	align-items: center;
+}
+
+.store-address i,
+.store-phone i,
+.store-hours i {
+	color: #FF8A00;
+	margin-right: 10px;
+	font-size: 1.1rem;
+}
+
+.hot-tag {
+	background-color: #FF8A00;
+	color: white;
+	padding: 2px 8px;
+	border-radius: 4px;
+	font-size: 0.8rem;
+	margin-left: 10px;
+}
+
+.store-actions {
+	margin-top: 20px;
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.action-btn {
+	padding: 8px 16px;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	background-color: var(--card-bg);
+	color: var(--text);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 0.95rem;
+}
+
+body.dark-mode .action-btn {
+	border-color: #444;
+}
+
+.action-btn:hover {
+	background-color: #FF8A00;
+	color: white;
+	border-color: #FF8A00;
+}
+
+.action-btn i {
+	font-size: 1rem;
+}
+
+/* 即将开业门店样式 */
+.coming-soon {
+	padding: 60px 0;
+	background-color: #FFF9E6;
+	border-radius: 8px;
+	margin: 0 20px 60px;
+}
+
+body.dark-mode .coming-soon {
+	background-color: #332d1f;
+}
+
+.coming-soon h2 {
+	font-size: 2rem;
+	margin-bottom: 15px;
+	color: #333;
+}
+
+body.dark-mode .coming-soon h2 {
+	color: #f0f0f0;
+}
+
+.coming-desc {
+	text-align: center;
+	font-size: 1.1rem;
+	color: #666;
+	margin-bottom: 40px;
+}
+
+body.dark-mode .coming-desc {
+	color: #bbb;
+}
+
+.coming-stores {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.coming-card {
+	background-color: white;
+	padding: 25px;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease;
+}
+
+body.dark-mode .coming-card {
+	background-color: #444;
+	color: #f0f0f0;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.coming-card:hover {
+	transform: translateY(-5px);
+}
+
+.coming-card h4 {
+	font-size: 1.2rem;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+body.dark-mode .coming-card h4 {
+	color: #f0f0f0;
+}
+
+.coming-time {
+	color: #FF8A00;
+	font-weight: 600;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+	.store-card {
+		flex-direction: column;
+	}
+
+	.store-img {
+		flex: 0 0 200px;
+	}
+
+	.store-actions {
+		flex-direction: column;
+	}
+
+	.action-btn {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.coming-soon {
+		margin: 0 10px 40px;
+		padding: 40px 0;
+	}
+
+	.coming-stores {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 480px) {
+	.locate-hero h1 {
+		font-size: 2rem;
+	}
+
+	.store-info {
+		padding: 20px 15px;
+	}
+
+	.store-info h3 {
+		font-size: 1.2rem;
+	}
+
+	.store-address,
+	.store-phone,
+	.store-hours {
+		font-size: 0.9rem;
+	}
+}
+
+/* 激活的导航链接样式 */
+.nav-links a.active {
+	color: #FF8A00;
+	font-weight: 600;
+	position: relative;
+}
+
+.nav-links a.active::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #FF8A00;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+/* 主题切换按钮 */
+.theme-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	background: transparent;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	color: #333;
+	cursor: pointer;
+	padding: 6px;
+	font-size: 1.2rem;
+	transition: all 0.3s;
+	position: relative;
+}
+
+.theme-toggle:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+body.dark-mode .theme-toggle {
+	color: #f0f0f0;
+	border-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .theme-toggle:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 核心修复：图标显示逻辑 */
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	fill: currentColor;
+	transition: opacity 0.3s ease;
+}
+
+/* 默认（明亮模式）：显示太阳，隐藏月亮 */
+.theme-toggle .icon-sun {
+	opacity: 1;
+	display: block;
+}
+
+.theme-toggle .icon-moon {
+	opacity: 0;
+	display: none;
+}
+
+/* 暗黑模式：隐藏太阳，显示月亮 */
+body.dark-mode .theme-toggle .icon-sun {
+	opacity: 0;
+	display: none;
+}
+
+body.dark-mode .theme-toggle .icon-moon {
+	opacity: 1;
+	display: block;
+}
